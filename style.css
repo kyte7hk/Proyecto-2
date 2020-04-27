@@ -1,0 +1,267 @@
+@charset "utf-8";
+*{
+	margin: 1px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+
+h1 {
+	color: tomato;
+	font-weight: 300;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: transparent;
+	border-color: tomato;
+	border: 1px solid tomato;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	padding: 20px;
+}
+
+/* Cabecera Menú */
+
+.logo{
+	color: tomato;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: 200;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.nav-links li{
+	list-style: none;
+}
+
+.nav-links a{
+	color: tomato;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: semibold;
+	font-size: 8px;
+}
+.nav-links  i {
+	color: blue;
+	font-size: 11.5px;
+}
+
+.burger{
+	display: none;
+	cursor: pointer;
+}
+
+.burger div{
+	width: 20px;
+	height: 2px;
+	background-color: tomato;
+	margin:3px;
+}
+
+@media screen and (max-width:1024px){
+	.nav-links{
+	width: 60%;
+	}
+	.presentation {
+		flex-direction: column;
+		}
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.app-picture img{
+		
+	}
+		
+}
+
+@media screen and (max-width:768px){
+	body{
+			overflow-x: hidden;
+	}
+	.nav-links{
+			position: absolute;
+			right: 0px;
+			height:92vh;
+			top: 8vh;
+			background-color: blue;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			transform: translateX(100%);
+			/*ansition: transform 0.5s ease-in;*/
+	}
+	.nav-links li {
+		opacity: 0;
+	}
+	.burger{
+		display: block;
+	}
+}
+
+/* Smartphones (portrait & landscape) */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+}
+
+.nav-active{
+	transform: translateX(0%);
+	transition: transform 0.5s ease-in;
+	
+}
+
+/* Cabecera */
+
+.active a{
+	color: blue !important;
+}
+
+.presentation {
+	width: 80%;
+	height: 100%;
+	top: 25%;
+	left: 137px;
+	position: absolute;
+	color: white;
+}
+
+.introduction {
+	width: 100%;
+	column-count: 2;
+	column-gap: 10em;
+	column-rule: 1px solid tomato;
+	column-width: 300px;
+}
+
+.introduction h1{
+	font-size: 50px;
+	width: 50%;
+	position: relative;
+	padding-top: 10px;
+}
+.introduction p{
+	width: 100%;
+	font-size: 20px;
+	text-align: justify;
+	padding-top: 15px;
+	line-height: 20px;
+	color: #919191;
+}
+
+.foto {
+	background-color: transparent;
+	border-color: tomato;
+	border: 1px solid tomato;
+	float: right;
+	width: 200px;
+	height: 200px;
+	padding-top: 20px;
+	
+	/*
+	width: 420px;
+	float: right;
+	margin-top: 20px ;
+	*/
+}
+
+.container ul li{
+	display: list-item;
+	margin-top: 20px;
+	text-align: justify;
+	text-align: left;
+	font-size: 15px;
+}
+.container ul li h1{
+	font-size: 25px;
+}
+.container p{
+	width: 50%;
+	font-size: 10px;
+	text-align: justify;
+	padding-top: 15px;
+	line-height: 20px;
+	color: #919191;
+}
+.container {
+	min-height: 100%;
+}
+
+/* Desplegable Proyectos Menú */
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: transparent;
+	min-width: 100px;
+	max-width: 100px;
+	z-index; 1;
+	padding-top: 25px;
+}
+
+.dropdown-menu a:hover {
+	background-color: tomato;
+	color: #fff;
+	min-width: 100px;
+	max-width: 100px;
+}
+
+.dropdown-menu a {
+	text-decoration: none;
+	font-size: 8px;	
+	color: blue;
+}
+
+
+.right-menu:hover .dropdown-menu {
+	display: block;
+	
+}
+
+a {
+float: left;
+clear: both;
+padding-left: 10px;
+padding-bottom: 5px;
+padding-top: 10px;
+}
+
+/* Footer */
+footer {
+	color: #aba8a8;
+	display: flex;
+	background-color: transparent;
+	border-color: tomato;
+	border: 1px solid tomato;
+	font-family: 'Montserrat', sans-serif;
+	padding: 10px;
+	position: relative;
+	position: fixed;
+	width: 21.5%;
+	bottom: 0;
+	align-content: center;
+	
+}
+footer p {
+	font-size: 10px;
+}
+.copyright i {
+	color: lightpink;
+}
